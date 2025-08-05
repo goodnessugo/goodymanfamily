@@ -117,10 +117,7 @@ from{
     animation: 20s starimageslideReverse infinite linear ;
 }
 
-.starLogos-slide img{
-   /* height: 10rem; */
-   /* margin: 0 2rem; */
-}
+
 
 /* slide images */
 .picHolder1{
