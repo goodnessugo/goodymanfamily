@@ -25,6 +25,7 @@ import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGear } from "react-icons/fa6";
 import future from '../assets/images/future.jpg'
 import collaboration from '../assets/images/collaboration.jpg'
+import Footer from './Footer';
 
 
 const Home = () => {
@@ -42,7 +43,7 @@ const Home = () => {
                 <div className="menu">
                     <ul>
                         <li className='py-2 px-3 flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent'>Register  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
-
+                        {/* <RequestInformation /> */}
                     </ul>
                 </div>
             </div>
@@ -176,7 +177,7 @@ const Home = () => {
                 <div className='section '>
                     <h1 className='text-3xl font-bold'>Tuition Fee</h1>
                     <p className='text-gray-600 leading-5'>Total Tuition for Courses is based on the Course Applied
-                        Students 
+                        Students
                     </p>
                 </div>
                 <div className='section '>
@@ -296,7 +297,7 @@ const Home = () => {
 
 
                                 <div className="picHolder1  shadow-md h-[90%] w-60 bg-red-500 rounded-xl">
-                                    
+
                                 </div>
 
                                 <div className="picHolder2 shadow-md  h-[90%] w-60 bg-green-500 rounded-xl">
@@ -341,6 +342,13 @@ const Home = () => {
                 </div>
 
 
+            </div>
+
+
+            {/*footer section  */}
+
+            <div>
+                <Footer />
             </div>
 
         </div>
