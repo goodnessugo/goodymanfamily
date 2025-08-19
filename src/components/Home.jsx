@@ -25,6 +25,7 @@ import { IoSchoolOutline } from "react-icons/io5";
 import { FaUserGear } from "react-icons/fa6";
 import future from '../assets/images/future.jpg'
 import collaboration from '../assets/images/collaboration.jpg'
+import { FaBarsStaggered } from "react-icons/fa6";
 import Footer from './Footer';
 
 
@@ -41,8 +42,9 @@ const Home = () => {
 
                 {/* menu */}
                 <div className="menu">
-                    <ul>
-                        <li className='py-2 px-3 flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent'>Explore More  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
+                    <ul className='flex justify-between items-center'>
+                        <li className=' invisible md:visible py-2 px-3  flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent text-sm md:text-md'>Explore More  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
+                        <li className='text-[2rem] visible md:invisible pe-5 '><FaBarsStaggered /> </li>
                         {/* <RequestInformation /> */}
                     </ul>
                 </div>
