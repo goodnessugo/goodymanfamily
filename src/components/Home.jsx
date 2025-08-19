@@ -33,7 +33,7 @@ const Home = () => {
         <div>
 
             {/* navigation section */}
-            <div className="nav flex justify-between py-5 pl-5 pe-16 items-center bg-gray-100">
+            <div className="nav flex justify-between py-5 px-5  items-center bg-gray-100">
                 {/* logo */}
                 <div className="logo">
                     <img src={Logo} alt="" className='h-10 w-auto' />
@@ -42,7 +42,7 @@ const Home = () => {
                 {/* menu */}
                 <div className="menu">
                     <ul>
-                        <li className='py-2 px-3 flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent'>Register  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
+                        <li className='py-2 px-3 flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent'>Explore More  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
                         {/* <RequestInformation /> */}
                     </ul>
                 </div>
