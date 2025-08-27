@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assets/images/goodyman.png'
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import scroll1 from '../assets/images/1.png'
@@ -27,26 +27,99 @@ import future from '../assets/images/future.jpg'
 import collaboration from '../assets/images/collaboration.jpg'
 import { FaBarsStaggered } from "react-icons/fa6";
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
+import { FaBars } from "react-icons/fa6";
+import { SlClose } from "react-icons/sl";
 
+
+import Modal from 'react-modal';
+Modal.setAppElement('#root')
 
 const Home = () => {
+
+
+    // for controlling the modal in useState
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+
+
+
+
+
+
+
+
+
     return (
         <div>
 
             {/* navigation section */}
-            <div className="nav flex justify-between py-5 px-5  items-center bg-gray-100">
+            <div className="nav  grid grid-cols-2 items-center py-2 px-5 md:py-5  bg-gray-100">
                 {/* logo */}
                 <div className="logo">
                     <img src={Logo} alt="" className='h-10 w-auto' />
                 </div>
 
                 {/* menu */}
-                <div className="menu">
-                    <ul className='flex justify-between items-center'>
-                        <li className=' invisible md:visible py-2 px-3  flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent text-sm md:text-md'>Explore More  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </li>
-                        <li className='text-[2rem] visible md:invisible pe-5 '><FaBarsStaggered /> </li>
-                        {/* <RequestInformation /> */}
-                    </ul>
+                <div className="menu flex  justify-end  items-center">
+                    <div className='flex justify-between gap-5 items-center invisible md:visible'>
+                        {/* menu section for desktop */}
+                        <Link to='/aboutus'>
+                            <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>About Us</div>
+
+                        </Link>
+
+                        <Link>
+                            <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>Contact</div>
+
+                        </Link>
+                        <div className=' py-2 px-3  flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent  md:text-md'>Login  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
+
+                    </div>
+
+
+                    {/* menu bar for small screen */}
+                    <div
+                        onClick={() => setModalIsOpen(true)}
+                        className='flex  justify-center items-center bg-gray-100 text-[2rem] md:hidden  p-4 rounded-full hover:bg-gray-300  cursor-pointer'>
+                        <FaBars />
+                    </div>
+
+
+
+                    {/* Modal Component */}
+                    <Modal
+                        isOpen={modalIsOpen}
+                        onRequestClose={() => setModalIsOpen(false)}
+                        className='bg-green-500 h-[50vh] '>
+
+                        <div className=' flex justify-end p-5'>
+                            <button
+                                onClick={() => setModalIsOpen(false)}
+                                className='text-[2rem] cursor-pointer'>
+                                <SlClose />
+
+                            </button>
+                        </div>
+
+                        <div className='flex flex-col justify-center items-center'>
+                            <ul className='flex flex-col items-center gap-5 text-white font-bold'>
+                                <Link to='/aboutus' className='hover:border-b-4 border-white'>
+                                    <li>About Us</li>
+                                </Link>
+                                <Link to='/aboutus' className='hover:border-b-4 border-white'>
+                                    <li>Contact Us</li>
+                                </Link>
+                                <Link to='/aboutus' className='hover:border-b-4 border-white'>
+                                    <li>Login/Sign Up</li>
+                                </Link>
+
+                            </ul>
+                        </div>
+
+                    </Modal>
+                    {/* End of Modal */}
+
                 </div>
             </div>
 
@@ -67,7 +140,7 @@ const Home = () => {
 
 
                 {/* hero image */}
-                <div className="heroImage mt-5 rounded-lg h-100  ">
+                <div className="heroImage mt-5 rounded-lg h-100 shadow-lg ">
 
                 </div>
 
@@ -109,13 +182,16 @@ const Home = () => {
 
 
             {/* Specilization section */}
-            <div className='grid grid-cols-1 md:grid-cols-2 my-28 px-5 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2  my-28 px-5 py-5 gap-5 items-center'>
                 <div className='left text-center'>
                     <p className='text-2xl italic'>New Specializations Available</p>
                     <h1 className='text-4xl font-bold my-4'>Master of  <br /> Website Design & Development, Brand Design, Office Experts  </h1>
                 </div>
 
-                <div className="right">
+                <div className="right flex flex-col justify-center items-center gap-5 px-3 md:px-20">
+                    <div className='h-70 w-100 bg-red-500 bg-[url(./assets/images/body.JPG)] bg-no-repeat bg-cover bg-center rounded-md shadow-lg'>
+
+                    </div>
                     <p className='text-center leading-5 text-gray-600'>Customize your learning process with cutting-edge specializations
                         in Web development, Branding and Marketing, Office Experts,  Learning Leadership,
                         Supply Chain Management, or Business Analytics — designed
@@ -126,8 +202,8 @@ const Home = () => {
             </div>
 
             {/* Course list */}
-            <div className="courseList  grid grid-cols-1 px-10 md:flex  justify-center gap-10 ">
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-90 bg-red-100 rounded-2xl">
+            <div className="courseList  grid grid-cols-1 items-center px-10 md:flex  md:justify-center gap-10 ">
+                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-red-100 rounded-2xl">
                     <TbWorldCode className='text-7xl text-red-800' />
                     <h1 className='font-bold '>Web Design & Development</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
@@ -141,7 +217,7 @@ const Home = () => {
 
                     <RequestInformation />
                 </div>
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-90 bg-blue-100 rounded-2xl">
+                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-blue-100 rounded-2xl">
                     <FaPenNib className='text-7xl text-blue-800' />
                     <h1 className='font-bold '>Branding and Marketing</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
@@ -155,7 +231,7 @@ const Home = () => {
 
                     <RequestInformation />
                 </div>
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-90 bg-green-100 rounded-2xl">
+                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-green-100 rounded-2xl">
                     <MdCoPresent className='text-7xl text-green-800' />
                     <h1 className='font-bold '>Office Expert</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
@@ -227,7 +303,7 @@ const Home = () => {
                         <h1>Entrepreneurship</h1>
                         <h1>Digital Marketing</h1>
                         <h1>Graphics Design</h1>
-                        <h1>Wed Development</h1>
+                        <h1>Web Development</h1>
                         <h1>Excel Accounting</h1>
                         <h1>Online Registration</h1>
                     </div>
@@ -282,13 +358,13 @@ const Home = () => {
                             <FaUserGear />
                         </div>
 
-                        <di className="starText">
+                        <div className="starText">
                             <h1 className='font-bold text-xl'>5 Star Rated</h1>
                             <p className='leading-5 text-gray-600'>Goodyman is the 3rd university in Canada, and the
                                 1st in Africa, to receive a
                                 5 Star rating.
                             </p>
-                        </di>
+                        </div>
                     </div>
 
                     {/* scrolling images */}
