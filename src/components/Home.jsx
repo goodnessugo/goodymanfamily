@@ -66,14 +66,17 @@ const Home = () => {
                         {/* menu section for desktop */}
                         <Link to='/aboutus'>
                             <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>About Us</div>
+                        </Link>
 
+                        <Link to='/courses'>
+                            <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>Courses</div>
                         </Link>
 
                         <Link>
                             <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>Contact</div>
-
                         </Link>
-                        <div className=' py-2 px-3  flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-transparent  md:text-md'>Login  <div className='bg-white p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
+
+                        <div className=' py-2 px-5  text-white flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-green-200  md:text-md'>Login/SignUp <div className='bg-white text-black p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
 
                     </div>
 
@@ -107,10 +110,13 @@ const Home = () => {
                                 <Link to='/aboutus' className='hover:border-b-4 border-white'>
                                     <li>About Us</li>
                                 </Link>
-                                <Link to='/aboutus' className='hover:border-b-4 border-white'>
+                                <Link to='/contactus' className='hover:border-b-4 border-white'>
                                     <li>Contact Us</li>
                                 </Link>
-                                <Link to='/aboutus' className='hover:border-b-4 border-white'>
+                                <Link to='/courses' className='hover:border-b-4 border-white'>
+                                    <li>Courses</li>
+                                </Link>
+                                <Link to='/login' className='hover:border-b-4 border-white'>
                                     <li>Login/Sign Up</li>
                                 </Link>
 
@@ -140,7 +146,7 @@ const Home = () => {
 
 
                 {/* hero image */}
-                <div className="heroImage mt-5 rounded-lg h-100 shadow-lg ">
+                <div className="heroImage mt-5 rounded-lg h-100 shadow-lg/75 ">
 
                 </div>
 
@@ -189,7 +195,7 @@ const Home = () => {
                 </div>
 
                 <div className="right flex flex-col justify-center items-center gap-5 px-3 md:px-20">
-                    <div className='h-70 w-100 bg-red-500 bg-[url(./assets/images/body.JPG)] bg-no-repeat bg-cover bg-center rounded-md shadow-lg'>
+                    <div className=' h-70 w-100 bg-red-500 bg-[url(./assets/images/body.JPG)] bg-no-repeat bg-cover bg-center rounded-md shadow-lg'>
 
                     </div>
                     <p className='text-center leading-5 text-gray-600'>Customize your learning process with cutting-edge specializations
@@ -203,8 +209,9 @@ const Home = () => {
 
             {/* Course list */}
             <div className="courseList  grid grid-cols-1 items-center px-10 md:flex  md:justify-center gap-10 ">
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-red-100 rounded-2xl">
-                    <TbWorldCode className='text-7xl text-red-800' />
+                <div className="fadeUp courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-red-100 rounded-2xl">
+                    
+                    <TbWorldCode className=' text-7xl text-red-800' />
                     <h1 className='font-bold '>Web Design & Development</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
                         with strategic, ethical, and
@@ -217,7 +224,7 @@ const Home = () => {
 
                     <RequestInformation />
                 </div>
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-blue-100 rounded-2xl">
+                <div className="fadeUp courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-blue-100 rounded-2xl">
                     <FaPenNib className='text-7xl text-blue-800' />
                     <h1 className='font-bold '>Branding and Marketing</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
@@ -231,7 +238,7 @@ const Home = () => {
 
                     <RequestInformation />
                 </div>
-                <div className="courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-green-100 rounded-2xl">
+                <div className="fadeUp courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-green-100 rounded-2xl">
                     <MdCoPresent className='text-7xl text-green-800' />
                     <h1 className='font-bold '>Office Expert</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates
@@ -252,8 +259,8 @@ const Home = () => {
             {/* Tuition and Sections */}
             <div className="sections bg-gray-100 m-10 p-5 md:p-8 content-center gap-5 md:gap-10 rounded-3xl h-80 md:h-50 grid grid-cols-2 md:grid-cols-4">
 
-                <div className='section '>
-                    <h1 className='text-3xl font-bold'>Tuition Fee</h1>
+                <div className=' section '>
+                    <h1 className='autoBlur text-3xl font-bold'>Tuition Fee</h1>
                     <p className='text-gray-600 leading-5'>Total Tuition for Courses is based on the Course Applied
                         Students
                     </p>
@@ -264,7 +271,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className='section '>
-                    <h1 className='text-3xl font-bold'>Delivery</h1>
+                    <h1 className=' autoBlur text-3xl font-bold'>Delivery</h1>
                     <p className='text-gray-600 leading-5'>Hybrid Mode
                         (in-person and online guided learning)
                     </p>

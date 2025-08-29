@@ -7,6 +7,9 @@ import Footer from './components/Footer'
 import TermsAndPolicy from './components/TermsAndPolicy'
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
+import Courses from './components/Courses'
+import Login from './components/Login'
+import Register from './components/Register'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +22,9 @@ function App() {
       <Route path='/termsandpolicy' element={<TermsAndPolicy/>} />
       <Route path='/aboutus' element={<AboutUs/>} />
       <Route path='/contactus' element={<ContactUs/>} />
+      <Route path='/courses' element={<Courses />} />
+      <Route path='/login' element={<Login />}/>
+      <Route path='/register' element={<Register />}/>
     </Routes>
   )
 }
