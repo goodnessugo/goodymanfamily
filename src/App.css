@@ -314,3 +314,10 @@ filter: blur(0px);
     scrollbar-color: #89fc00 #1a1a1a;
 
 }
+
+
+
+/* hide scroll bar, apply no-scrollbar*/
+.no-scrollbar::-webkit-scrollbar{
+    display: none;
+}

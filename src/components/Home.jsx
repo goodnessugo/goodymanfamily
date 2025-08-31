@@ -76,7 +76,11 @@ const Home = () => {
                             <div className='p-3 hover:bg-gray-300 cursor-pointer rounded'>Contact</div>
                         </Link>
 
-                        <div className=' py-2 px-5  text-white flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-green-200  md:text-md'>Login/SignUp <div className='bg-white text-black p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
+
+                        <Link to='/dashboard'>
+                            <div className=' py-2 px-5  text-white flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-green-200  md:text-md'>Login/SignUp <div className='bg-white text-black p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
+
+                        </Link>
 
                     </div>
 
@@ -210,7 +214,7 @@ const Home = () => {
             {/* Course list */}
             <div className="courseList  grid grid-cols-1 items-center px-10 md:flex  md:justify-center gap-10 ">
                 <div className="fadeUp courseFrame flex flex-col items-center justify-center p-10 h-90 w-full md:w-90 bg-red-100 rounded-2xl">
-                    
+
                     <TbWorldCode className=' text-7xl text-red-800' />
                     <h1 className='font-bold '>Web Design & Development</h1>
                     <p className='text-center mt-3 leading-5'>This specialization equips graduates

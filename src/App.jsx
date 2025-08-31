@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs'
 import Courses from './components/Courses'
 import Login from './components/Login'
 import Register from './components/Register'
+import Dashboard from './components/Dashboard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       <Route path='/courses' element={<Courses />} />
       <Route path='/login' element={<Login />}/>
       <Route path='/register' element={<Register />}/>
+      <Route path='/dashboard' element={<Dashboard />}/>
     </Routes>
   )
 }
