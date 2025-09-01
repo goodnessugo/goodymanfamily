@@ -17,7 +17,7 @@ import scroll13 from '../assets/images/13.png'
 import scroll14 from '../assets/images/14.png'
 import scroll15 from '../assets/images/15.png'
 import { TbWorldCode } from "react-icons/tb";
-import RequestInformation from './RequestInformation';
+import RequestInformation from './buttons/RequestInformation';
 import { FaPenNib } from "react-icons/fa6";
 import { MdCoPresent } from "react-icons/md";
 import { FaPeopleLine } from "react-icons/fa6";
@@ -33,6 +33,7 @@ import { SlClose } from "react-icons/sl";
 
 
 import Modal from 'react-modal';
+import LoginButton from './buttons/LoginButton';
 Modal.setAppElement('#root')
 
 const Home = () => {
@@ -77,10 +78,10 @@ const Home = () => {
                         </Link>
 
 
-                        <Link to='/dashboard'>
-                            <div className=' py-2 px-5  text-white flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-green-200  md:text-md'>Login/SignUp <div className='bg-white text-black p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
+                        
+                            <div className=' py-2 px-5  text-white flex gap-2 items-center bg-green-500 rounded-full cursor-pointer hover:text-green-500 hover:bg-green-200  md:text-md'><LoginButton /> <div className='bg-white text-black p-2 rounded-full'><  MdKeyboardDoubleArrowRight className='text-lg' /></div> </div>
 
-                        </Link>
+                        
 
                     </div>
 
@@ -121,7 +122,7 @@ const Home = () => {
                                     <li>Courses</li>
                                 </Link>
                                 <Link to='/login' className='hover:border-b-4 border-white'>
-                                    <li>Login/Sign Up</li>
+                                    <li> <LoginButton/> </li>
                                 </Link>
 
                             </ul>
